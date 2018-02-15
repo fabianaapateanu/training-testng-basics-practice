@@ -17,25 +17,11 @@ import java.util.concurrent.TimeUnit;
 public class WaitHelper {
     private WebDriver driver;
     private final Logger LOG = CustomLogger.getInstance(WaitHelper.class).getLogger();
-    private final int DEFAULT_TIME = 5; //seconds
+    private final int DEFAULT_TIME = 20; //seconds
 
-    private static WaitHelper instance = null;
-
-    private WaitHelper() {
-        driver = CustomDriver.getInstance().getDriver();
+    public WaitHelper(WebDriver driver) {
+        this.driver = driver;
     }
-
-    /**
-     * Get the WaitHelper unique instance
-     *
-     * @return
-     */
-    static public WaitHelper getInstance() {
-        if (instance == null)
-            instance = new WaitHelper();
-        return instance;
-    }
-
 
     //simple wait for x milliseconds
     public void simpleWait(int milisec) {

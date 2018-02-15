@@ -27,9 +27,6 @@ public class HomePage extends UserHeaderMenu {
     @FindBy(className = "blankslate")
     private WebElement emptySearchResults;
 
-    protected ActionHelper driverActionHelper;
-    protected WaitHelper driverWaitHelper;
-
     private Logger log;
 
     public HomePage(WebDriver driver) {
@@ -38,8 +35,6 @@ public class HomePage extends UserHeaderMenu {
         log.info("Initializing HomePage...");
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        driverActionHelper = ActionHelper.getInstance();
-        driverWaitHelper = WaitHelper.getInstance();
         driverWaitHelper.waitForElementVisibility(loggedInBodyElem);
         log.info("Finished HomePage initialization");
     }

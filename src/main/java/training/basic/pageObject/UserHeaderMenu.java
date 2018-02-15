@@ -38,9 +38,8 @@ public class UserHeaderMenu {
         log.info("Initializing UserHeaderMenu...");
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        driverActionHelper = ActionHelper.getInstance();
-        driverWaitHelper = WaitHelper.getInstance();
-
+        driverActionHelper = new ActionHelper(driver);
+        driverWaitHelper = new WaitHelper(driver);
         driverWaitHelper.waitForElementVisibility(menuContainer);
 
         log.info("Finished UserHeaderMenu initialization");

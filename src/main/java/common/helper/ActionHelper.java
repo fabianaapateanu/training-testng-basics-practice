@@ -1,6 +1,5 @@
 package common.helper;
 
-import common.CustomDriver;
 import common.CustomLogger;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -10,21 +9,8 @@ public class ActionHelper {
     private WebDriver driver;
     private static final Logger LOG = CustomLogger.getInstance(ActionHelper.class).getLogger();
 
-    private static ActionHelper instance = null;
-
-    private ActionHelper() {
-        driver = CustomDriver.getInstance().getDriver();
-    }
-
-    /**
-     * Get the CustomDriver unique instance
-     *
-     * @return
-     */
-    static public ActionHelper getInstance() {
-        if (instance == null)
-            instance = new ActionHelper();
-        return instance;
+    public ActionHelper(WebDriver driver) {
+        this.driver = driver;
     }
 
     // Click on an element

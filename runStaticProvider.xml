@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Static DataProvider Suite">
+    <test name="DataProvider Suite">
+        <classes>
+            <class name="dataprovider.DataProviderLoginTests"/>
+        </classes>
+    </test>
+</suite>

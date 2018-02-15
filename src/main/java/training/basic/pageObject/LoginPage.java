@@ -42,9 +42,8 @@ public class LoginPage {
         log.info("Initializing LoginPage...");
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        driverActionHelper = ActionHelper.getInstance();
-        driverWaitHelper = WaitHelper.getInstance();
-
+        driverActionHelper = new ActionHelper(driver);
+        driverWaitHelper = new WaitHelper(driver);
         driverWaitHelper.waitForElementVisibility(loginFormDivElem);
 
         log.info("Finished LoginPage initialization");
