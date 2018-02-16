@@ -1,5 +1,5 @@
-# training-testng-basic 
-Basic TestNG examples with WebDriver and Chrome browser.
+# training-testng-basic-practice
+More TestNG examples with WebDriver and Chrome & Firefox browsers.
 
 ## Project resources
 * src/main/resources/drivers/mac - chromedriver v. 2.35
@@ -18,9 +18,9 @@ Basic TestNG examples with WebDriver and Chrome browser.
 * src/test/java
     * /basic - test classes for basic examples
     * /dataprovider - test classes for dataprovider examples
+    * /todo - test class for you to practice
     
 ## Browser parameter
-
 Supported values are:
 * value="firefox"
 * value="chrome"
@@ -28,12 +28,12 @@ Supported values are:
     
 ## Running the Demos
 1. You will need to create yourself a valid GitHub account
-2. For login tests you will need to use the data providers withe the User object.
+2. For login tests you will need to use the data providers with the User object, which is
+your valid GitHub username and password
 
 ## Demo 1
 Example of static data provider, a different data provider class with two 
-test data parameters.
-Test class used is `DataProviderLoginTests.java`.
+test data parameters. Test class used is `DataProviderLoginTests.java`.
 
 1. Data provider class `StaticDataProvider.java` we have:
     1. `@DataProvider(name = "invalid_user_data_and_browser")`
