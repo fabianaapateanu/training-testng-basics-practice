@@ -67,4 +67,4 @@ Test class used is `DataProviderBrowserTests.java`.
     * `//TODO replace the Browser parameter object with your Search object
        @Test(dataProvider = "valid_login_search_browser_data", dataProviderClass = StaticDataProvider.class)
        public void searchWithMultipleResults(User user, Browser browser, Browser searchQuery)` 
-4. Create a new testng.xml file which will run your class `DataProviderSearchTests.java`.
+4. Create a new testng.xml file which will run your class `DataProviderSearchTests.java` and its test methods sequentially.
