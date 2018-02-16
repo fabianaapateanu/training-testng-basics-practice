@@ -10,6 +10,13 @@ import training.basic.dataprovider.User;
 import training.basic.pageObject.HomePage;
 import training.basic.pageObject.LoginPage;
 
+/**
+ * DataProvider can be used with your own defined objects.
+ * {main/java/training/basic/dataprovider/User.java} is used in this example for login test data.
+ * {main/java/training/basic/dataprovider/Browser.java} is used for browser name parameter
+ *
+ * @author fapateanu
+ */
 public class DataProviderBrowserTests {
     private static ThreadLocal<CustomDriver> myDriver = new ThreadLocal<CustomDriver>();
     private static Logger LOG;
