@@ -26,6 +26,12 @@ Supported values are:
 * value="chrome"
 * value="safari"
     
+## Parallel use of WebDriver
+For being able to run the tests in parallel and having another instance of WebDriver available we have added in `CustomDriver.java`
+the thread safe driver usage:
+
+`private static ThreadLocal<WebDriver> myDriver = new ThreadLocal<WebDriver>();`
+
 ## Running the Demos
 1. You will need to create yourself a valid GitHub account
 2. For login tests you will need to use the data providers with the User object, which is
@@ -42,7 +48,6 @@ test data parameters. Test class used is `DataProviderLoginTests.java`.
     1. `@Test(dataProvider = "invalid_user_data_and_browser", dataProviderClass = StaticDataProvider.class)` 
     2. Both parameters `loginWithInvalidUser(User testUser, Browser browser)` were added to the test method
 3. Running the `runStaticProvider.xml` will run invalid login test on Chrome and one test on Firefox
-
         
 ## Demo 2
 Example of parallel test method run using User and Browser objects from static data provider.
